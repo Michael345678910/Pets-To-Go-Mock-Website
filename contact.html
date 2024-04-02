@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pets To Go</title>
+    <meta name="description" content="Contact Pets To Go for your pet adoption needs, volunteering, or donations.">
+    <meta name="keywords" content="Pet Adoption, Donate, Volunteer, Pets To Go, Contact">
+    <meta name="author" content="Pets To Go Animal Shelter">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to Pets To Go</h1>
+                <h2>Your companionship starts here!</h2>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About PTG</a></li>
+                <li><a href="pets.html">Adopt A Pet</a></li>
+                <li><a href="Volunteering.html">PTG Volunteering</a></li>
+                <li><a href="contact.html">Contact Or Donate To Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function thankDonor(amount) {
+            var messageElement = document.getElementById('thank-you-message');
+            if (amount <= 0) {
+                messageElement.style.display = 'block';
+                messageElement.textContent = "Please enter a positive donation amount.";
+                messageElement.style.color = 'red';
+            } else {
+                messageElement.style.display = 'block';
+                messageElement.textContent = `Thank you for your generous donation of $${amount}!`;
+                messageElement.style.color = 'green'; 
+            }
+        }
+        
+        function showCustomDonation() {
+            var customAmountInput = document.getElementById('custom-amount');
+            customAmountInput.style.display = 'block';
+            customAmountInput.focus();
+            customAmountInput.addEventListener('change', function() {
+                thankDonor(this.value);
+                this.style.display = 'none';
+            });
+        }
+    </script>
+
+<main>
+    <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="formhandler.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <br>
+
+    <section class="donation-section">
+        <h2>Support Us</h2>
+        <button class="donate-button" onclick="thankDonor(1)">Donate $1</button>
+        <button class="donate-button" onclick="thankDonor(5)">Donate $5</button>
+        <button class="donate-button" onclick="showCustomDonation()">Other Amount</button>
+        <input type="number" id="custom-amount" style="display:none;" placeholder="Enter amount" />
+        <div id="thank-you-message" style="display:none;"></div>
+    </section>
+
+</main>
+
+<footer>
+    <a href="#">Back to Top</a>
+    <p>&copy; 2023 Pets To Go Animal Shelter. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+/* Reset margins and paddings */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #000; 
+    overflow: hidden;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+}
+
+nav ul li {
+    display: inline-block; /* Display links in a row */
+}
+
+nav ul li a {
+    display: block;
+    color: white; 
+    text-decoration: none;
+    padding: 20px; 
+}
+
+nav ul li a:hover,
+footer a:hover {
+    background-color: #555; 
+}
+
+/* Adjusting the Hero Image */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    background: url('Images/BackDrop 1.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers vertically and horizontally */
+}
+
+/* Centering and Styling Hero Text */
+.hero-text {
+    text-align: center; /* Centers the text horizontally */
+    color: black; 
+    display: flex;
+    flex-direction: column; /* Aligns (H1, H2) in a column */
+    justify-content: center;
+    align-items: center; /* Centers items horizontally in the container */
+    width: 100%; /* Ensures the .hero-text takes full width */
+    position: absolute; 
+    top: 0;
+}
+
+.hero-text h1, .hero-text h2 {
+    color: black; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
+    margin: 10px 0;
+}
+
+
+.hero-text h1 {
+    font-size: 60px; 
+    font-weight: bold;
+}
+
+.hero-text h2 {
+    font-size: 48px; 
+}
+
+/* Additional responsiveness */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 250px; /* Further reduced for small screens */
+    }
+
+    .hero-text h1 {
+        font-size: 28px; /* Slightly smaller font size for small screens */
+    }
+
+    .hero-text p {
+        font-size: 16px; /* Adjusted for small screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #000; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+footer a {
+    color: white;
+    padding: 5px;
+    margin: 0 15px;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Flexbox Gallery Layout */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pet-photo {
+    margin: 10px;
+}
+
+.pet-image {
+    max-width: 100%;
+    height: auto;
+}
+    
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px; 
+}
+
+.flex-item {
+    width: 30%; 
+    margin: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
+    padding: 20px; 
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .flex-item {
+        width: 100%; /* Stack items on smaller screens */
+    }
+}
+
+.donate-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+#custom-amount {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.about-container {
+    margin: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adjusts the spacing between flex items */
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 300px; 
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,.2); 
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-section, .image-container{
+    max-width: 800px; 
+    width: 100%;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes default image inline space */
+    margin-top: 20px; /* Adds some space above the image */
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .team-section, .image-container {
+        width: 45%; /* Adjust the width on larger screens */
+    }
+}
+
+/* Set a fixed height for the images */
+.pet-info img {
+    height: 200px; 
+    width: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensures the images are displayed as block elements */
+    margin: 0 auto; /* Center the images horizontally */
+}
+
+.main-content h1 {
+    font-size: 32px; 
+    text-align: center; /* Center align while fitting design */
+    margin-bottom: 20px; /* Adds space below heading */
+    font-weight: bold;
+    color: #333; 
+}
+
+.main-content h1 {
+    font-size: 28px; 
+    text-align: center; /* Centers the heading */
+    margin: 10px 0 20px; /* Adjusts spacing around the heading */
+    color: #333; 
+}
+
+/* Global H1 styling */
+h1 {
+    font-size: 36px; 
+    font-weight: bold; 
+    color: #333; 
+    text-align: center; 
+    margin: 20px 0; /* Adds top and bottom margin for spacing */
+}
+
+.hero-text h1 {
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column; /* This ensures items are stacked vertically */
+    align-items: center; /* This will center-align the items horizontally */
+    width: 100%; /* Ensures the main content takes full width */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Keeps existing behaviour, spacing items nicely */
+    gap: 20px; /* Adjust the spacing between flex items */
+    width: 100%; /* Ensures the flex container takes its full width */
+}
+
+.flex-image {
+    width: 100%; /* This will make the image responsive to the container's width. */
+    height: 200px; /* Fixed height for all images */
+    object-fit: contain; /* Ensures the entire image is visible */
+    display: block;
+    margin: 0 auto 20px; /* Centers the image horizontally and adds margin below */
+}
+
+@media (max-width: 768px) {
+    .flex-image {
+        height: 150px; /* Adjusts height for smaller screens */
+        margin-bottom: 10px; /* Less space below images on smaller screens */
+    }
+}
+
+.button-large {
+    font-size: 2em;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adjust the spacing between flex items */
+}
+
+.flex-item {
+    width: 30%;
+    margin: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .flex-item {
+        width: 100%;
+    }
+}
+
+/* Enhanced Form Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    display: block; /* Makes each field take its own row */
+    width: 80%; /* Adjust based on preference */
+    margin: 10px auto; /* Centers the field and adds vertical spacing */
+    padding: 12px; /* Increase for larger touch area */
+    font-size: 1rem; /* Adjust as needed */
+    border: 1px solid #ccc; /* Gives a subtle border */
+    border-radius: 4px; /* Softly rounds the corners */
+}
+
+/* Button Enhancements */
+button,
+.donate-button {
+    display: inline-block; /* Ensures button text alignment */
+    background-color: #4CAF50; /* Example button color */
+    color: white; /* Text color */
+    padding: 14px 28px; /* Larger, easier to click */
+    margin: 10px auto; /* Adds space around and auto centers if block display */
+    font-size: 1rem; /* Larger text */
+    cursor: pointer; /* Mouse pointer indicates clickable */
+    border: none; /* Typically buttons don't need a border here */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover,
+.donate-button:hover {
+    background-color: #45a049; /* Slightly lighter on hover */
+}
+
+/* Ensuring everything stacks vertically and centered */
+.contact-form form,
+.donation-section {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers items horizontally */
+    gap: 10px; /* Adds space between each form element */
+}
+
+/* Adjusting the visibility of input for custom amount */
+#custom-amount {
+    display: none; /* Hidden by default; will show via JavaScript */
+    width: 50%; /* Custom width */
+}
+
+/* Responsive Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    #custom-amount {
+        width: 90%; /* More screen width usage on smaller devices */
+    }
+
+    button,
+    .donate-button {
+        padding: 10px 20px; /* Slightly smaller pads for small screens */
+    }
+}
