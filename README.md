@@ -20,6 +20,7 @@ The Pets To Go website is an online platform designed to promote pet adoption, a
 # Usage Instructions:
 
 # File Pathway Tree/ File Directory:
+Please check the File Pathway Tree File found in this project's repository.
 
 ## Installation & Setup:
 1.	Clone this repository to your local machine.
