@@ -19,6 +19,8 @@ The Pets To Go website is an online platform designed to promote pet adoption, a
 
 # Usage Instructions:
 
+# File Pathway Tree/ File Directory:
+
 ## Installation & Setup:
 1.	Clone this repository to your local machine.
 2.	Have HTML5 & CSS3 installed to your machine and inside of a runnable IDE (Such as VS Code).
